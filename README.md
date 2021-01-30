@@ -1,7 +1,5 @@
 # Comment-Sentiment-Analysis
-Sentiment analysis on an amazon food dataset.
-
-In this repository there are different models that analyze the opinion left by travelers on twitter. The data has been taken from a [competition in Kaggle](https://www.kaggle.com/c/spanish-arilines-tweets-sentiment-analysis/overview) carried out by a Spanish areoline. The data has been processed and various techniques have been tried for its processing.
+Sentiment analysis on an [amazon food dataset](https://www.kaggle.com/snap/amazon-fine-food-reviews).
 
 ## Text mining
 
@@ -29,7 +27,7 @@ In this repository there are different models that analyze the opinion left by t
 |---------------------------------|--------------|--------------|-----------------|
 | DF + no processing data         |      33      |      20      |        38       |
 | RF + no processing data         |      63      |      17      |        51       |
-| **AB + processing data**           |      **64**      |      **18**      |        **51**       |
+| **AB + no processing data**           |      **64**      |      **18**      |        **51**       |
 | DF + processing data            |      30      |      18      |        35       |
 | RF + processing data            |      53      |      20      |        49       |
 | AB + processing data            |      55      |      19      |        49       |
@@ -39,7 +37,26 @@ In this repository there are different models that analyze the opinion left by t
 
 ### TF-idf Matrix
 
+| Model                           | Precision(%) | Macro Avg(%) | Weighted Avg(%) |
+|---------------------------------|--------------|--------------|-----------------|
+| DF + no processing data         |      39      |      20      |        41       |
+| **RF + no processing data**         |      **64**      |      **16**      |        **51**       |
+| AB + no processing data         |      63      |      18      |        51       |
+| DF + processing data            |      34      |      19      |        38       |
+| RF + processing data            |      59      |      18      |        50       |
+| AB + processing data            |      55      |      19      |        49       |
+| DF + processing data + balanced |      22      |      21      |        21       |
+| RF + processing data + balanced |      22      |      17      |        17       |
+| AB + processing data + balanced |      25      |      23      |        23       |
+
 ### Deep Learning
+
+| Model                             | Precision(%) | Macro Avg(%) | Weighted Avg(%) |
+|-----------------------------------|--------------|--------------|-----------------|
+| LTSM + no processing data         |      66      |      36      |        62       |
+| LTSM + processing data            |      65      |      41      |        64       |
+| **LTSM + processing data + balanced** |      **86**      |      **86**      |        **86**       |
+
 
 
 ## Technologies and Libraries
